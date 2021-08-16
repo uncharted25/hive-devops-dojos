@@ -1,0 +1,20 @@
+grep -rl "@skip" ./files | while read file ; do
+  feature="$(grep 'Feature:' $file)"
+  # only feature file
+  if ! [ -z "$feature" ]
+  then
+    skipped_feature="$(grep -A1 '@skip' $file | grep 'Feature:')"
+    if ! [ -z "$skipped_feature" ]
+    then
+      # skipped feature -> count all Scenario
+      c="$(grep -o 'Scenario:' $file | wc -l)"
+      sce="$(grep 'Scenario:' $file)"
+    else
+      c="$(grep -o '@skip' $file | wc -l)"
+      sce="$(grep -A3 '@skip' $file | grep 'Scenario:')"
+    fi
+    echo "$feature :skip $c" | xargs
+    echo "$sce"
+    echo
+  fi
+done
