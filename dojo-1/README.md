@@ -7,7 +7,7 @@ The script need to be executed on the same folder as the current Readme. Data th
 
 ## Part 1
 
-Create a script bash that will find all files that contains the ‘@skip’ annotation.
+Create a script bash that will find all files who contains skipped tests (tip: the annotation for that is *@skip*)
 ![part-1](./images/part-1.png)
 
 ## Part 2
