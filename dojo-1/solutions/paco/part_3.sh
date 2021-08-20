@@ -7,11 +7,11 @@ grep -r -H -l "@skip" * | while read -r line ; do
     if [ ! -z "$feature_line" ]
     then
         count_skip=$(grep -c "@skip" $line)
-        # five_lines=$(grep -A2 "@skip" $line | grep "Scenario:")
+        five_lines=$(grep -A2 "@skip" $line | grep "Scenario:")
         
         output="${feature_line}: ${count_skip} skipped"
         echo $output
-        # echo $five_lines
+        echo $five_lines
         echo ""
     fi
 done
