@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../datas
+cd ../../datas
 grep -r -H -l "@skip" * | while read -r line ; do
     # echo "Processing $line"
     feature_line=$(grep "Feature:" $line)
