@@ -9,13 +9,13 @@ We will have two rules:
   - do not allow *@skip* in top of a Feature keyword
   - all annotation should be in 1 line
 
-## Part 1
+## Part 1: validation
 
 Display all feature file that contains a wrong format, and display the error.
 
 If an error is detected, the script should failed. If it's all good, the script should exit with a success code.
 
-## Part 2
+## Part 2: auto format
 
 Add an option at the end of the first, when error are detected, to do a auto-format of the existing file if user accept.
 
