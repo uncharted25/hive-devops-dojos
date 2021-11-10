@@ -1,0 +1,108 @@
+{
+  "plugins": [
+    "cypress",
+    "chai-friendly"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:cypress/recommended",
+    "airbnb/base"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": [
+      "warn",
+      "never"
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "linebreak-style": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 200
+      }
+    ],
+    "import/no-unresolved": 0,
+    "no-plusplus": 0,
+    "no-else-return": 0,
+    "template-curly-spacing": "off",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "ignoredNodes": [
+          "TemplateLiteral"
+        ]
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "internal",
+          "external",
+          "parent",
+          "sibling",
+          "index",
+          "unknown"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "./**.less",
+            "group": "index",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": 0,
+    "camelcase": "off",
+    "no-nested-ternary": "off",
+    "prefer-template": "off",
+    "react/forbid-prop-types": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "consistent-return": "off",
+    "cypress/no-unnecessary-waiting": "off",
+    "array-callback-return": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-restricted-syntax": "off",
+    "no-unused-expressions": "off",
+    "cypress/no-assigning-return-values": "off"
+  }
+}
