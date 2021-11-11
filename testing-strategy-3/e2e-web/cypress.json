@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://google.com",
+  "baseUrl": "http://localhost:3000",
   "testFiles": "**/*.feature",
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 10000,

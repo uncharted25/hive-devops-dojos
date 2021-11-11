@@ -6,5 +6,5 @@ import { When } from 'cypress-cucumber-preprocessor/steps'
 ****************************************** */
 
 When('I open the {string} page', (pageName) => {
-    cy.visit(pageName)
+  cy.visit(pageName)
 })
