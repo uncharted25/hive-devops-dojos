@@ -6,5 +6,3 @@
   - Dojo 4: Docker and minikube and Ingress
 
 
-
-text push By Bush
