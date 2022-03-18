@@ -75,3 +75,6 @@ mobile-not-login/
 mobile-login/
 webview-login/
 build/
+
+# report
+reports/

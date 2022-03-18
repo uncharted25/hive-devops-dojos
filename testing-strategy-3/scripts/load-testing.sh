@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+DIR_PIPELINES="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+DIR_REPORTS="$(dirname ${DIR_PIPELINES})/reports"
+
+echo $DIR_REPORTS
+
 if [ -z "$2" ]; then
     echo "Missing env, stopping now."
     exit 1
@@ -7,7 +12,11 @@ fi
 ENVIRONMENT="$2"
 
 test() {
-  ab -n 10000 -c 10 "https://www.google.com/"
+  ab -n 10000 -c 10 "https://www.google.com/" >$DIR_REPORTS/load-testing-result.txt 2>&1
+}
+
+clean() {
+  rm $DIR_REPORTS/load-testing-result.txt
 }
 
 case "$1" in
