@@ -72,10 +72,10 @@ const Form = () => {
     return (
       <form style={formStyle} onSubmit={handleSubmit} >
         <img class="form-logo" src={logo} alt="Palo-IT logo"/>
-        <Field ref={usernameRef} label="Username:" type="text" />
-        <Field ref={passwordRef} label="Password:" type="password" />
+        <Field id="username" ref={usernameRef} label="Username:" type="text" />
+        <Field id="password" ref={passwordRef} label="Password:" type="password" />
         <div>
-          <button style={submitStyle} type="submit">Submit</button>
+          <button id="submit" style={submitStyle} type="submit">Submit</button>
         </div>
         <p>{resultMessage}</p>
       </form>
