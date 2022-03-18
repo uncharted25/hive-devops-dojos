@@ -1,0 +1,63 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "react-native-welcome-page;as-a-user,-i-want-to-see-the-welcome-page",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "As a user, I want to see the welcome page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1560000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should see \"welcome-screen\"",
+            "match": {
+              "location": "features/step_definitions/common.js:259"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 564000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 428000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@welcome-page",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "react-native-welcome-page",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "React native welcome page",
+    "tags": [
+      {
+        "name": "@welcome-page",
+        "line": 1
+      }
+    ],
+    "uri": "features/ExampleTest.feature"
+  }
+]

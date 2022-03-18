@@ -1,0 +1,201 @@
+{
+  "artifacts": {
+    "plugins": {
+      "instruments": {
+        "enabled": false
+      },
+      "log": {
+        "enabled": true
+      },
+      "screenshot": {
+        "shouldTakeAutomaticSnapshots": false,
+        "keepOnlyFailedTestsArtifacts": true,
+        "takeWhen": {
+          "testStart": false,
+          "testDone": true
+        }
+      }
+    }
+  },
+  "behavior": {
+    "init": {
+      "reinstallApp": true
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "id": "58B2A2BD-DD0E-4EE7-B4E3-EF15ECBC8EF0"
+      }
+    },
+    "ios.simulator.local": {
+      "type": "ios.simulator",
+      "device": {
+        "name": "iPhone X",
+        "type": "iPhone X",
+        "os": "iOS 14.5"
+      }
+    },
+    "android.attached": {
+      "type": "android.attached",
+      "device": {
+        "adbName": "emulator-5554"
+      }
+    },
+    "android.detox": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel3_API_30"
+      }
+    },
+    "android.local": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel3_API_30"
+      },
+      "bootArgs": "-writable-system -no-boot-anim -netdelay none -netspeed full -no-snapshot-save"
+    },
+    "android.multi": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel3_API_30"
+      },
+      "bootArgs": "-writable-system -no-boot-anim -netdelay none -netspeed full -no-snapshot-save",
+      "readonly": true
+    },
+    "android.headless.multi": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel3_API_30"
+      },
+      "bootArgs": "-writable-system -no-boot-anim -netdelay none -netspeed full -no-snapshot-save",
+      "readonly": true,
+      "headless": true
+    }
+  },
+  "apps": {
+    "android.debug": {
+      "type": "android.apk",
+      "binaryPath": "../mobile/android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd ../mobile/android && APP_ENV=test RN_SRC_EXT=e2e.ts ./gradlew app:assembleDebug app:assembleAndroidTest -DtestBuildType=debug && cd ../../e2e"
+    },
+    "ios.debug": {
+      "type": "ios.app",
+      "binaryPath": "../mobile/ios/build/Build/Products/Debug-iphonesimulator/DemoMobileProject.app",
+      "build": "cd ../mobile && APP_ENV=test RN_SRC_EXT=e2e.ts RCT_NO_LAUNCH_PACKAGER=1 xcodebuild -workspace ios/DemoMobileProject.xcworkspace -quiet -scheme DemoMobileProject -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -destination 'name=iPhone 12'"
+    }
+  },
+  "configurations": {
+    "ios.sim.debug": {
+      "device": "ios.simulator.local",
+      "app": "ios.debug",
+      "artifacts": {
+        "rootDir": "artifactsIOS",
+        "plugins": {
+          "screenshot": {
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "takeWhen": {
+              "testStart": false,
+              "testDone": true
+            }
+          },
+          "video": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "takeWhen": {
+              "testStart": false,
+              "testDone": true
+            },
+            "android": {
+              "bitRate": 4000000
+            },
+            "simulator": {
+              "codec": "hevc"
+            }
+          }
+        }
+      }
+    },
+    "android.emu.debug": {
+      "device": "android.local",
+      "app": "android.debug",
+      "behavior": {
+        "cleanup": {
+          "shutdownDevice": true
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifactsAndroid",
+        "plugins": {
+          "screenshot": {
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "takeWhen": {
+              "testStart": false,
+              "testDone": true
+            }
+          },
+          "video": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "takeWhen": {
+              "testStart": false,
+              "testDone": true
+            },
+            "android": {
+              "bitRate": 4000000
+            },
+            "simulator": {
+              "codec": "hevc"
+            }
+          }
+        }
+      }
+    },
+    "android.multi.debug": {
+      "device": "android.multi",
+      "app": "android.debug",
+      "behavior": {
+        "cleanup": {
+          "shutdownDevice": true
+        }
+      }
+    },
+    "android.attached.debug": {
+      "device": "android.attached",
+      "app": "android.debug",
+      "artifacts": {
+        "rootDir": "artifactsAndroid",
+        "plugins": {
+          "screenshot": {
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "takeWhen": {
+              "testStart": false,
+              "testDone": true
+            }
+          },
+          "video": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true,
+            "takeWhen": {
+              "testStart": false,
+              "testDone": true
+            },
+            "android": {
+              "bitRate": 4000000
+            },
+            "simulator": {
+              "codec": "hevc"
+            }
+          }
+        }
+      }
+    }
+  }
+}

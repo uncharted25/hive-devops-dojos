@@ -1,0 +1,4 @@
+{
+  "setupFilesAfterEnv": ["./support/init.js"],
+  "testEnvironment": "node"
+}
