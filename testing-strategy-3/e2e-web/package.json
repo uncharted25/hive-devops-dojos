@@ -10,7 +10,8 @@
     "test:chrome": "$(npm bin)/cypress run --browser chrome --headed",
     "test:focus": "$(npm bin)/cypress-tags run --browser chrome --headed -e TAGS='@focus and not @skip'",
     "lint": "$(npm bin)/eslint '**/*.js'",
-    "lint-fix": "$(npm bin)/eslint '**/*.js' --fix"
+    "lint-fix": "$(npm bin)/eslint '**/*.js' --fix",
+    "generate-report": "node generate-multiple-report.js"
   },
   "keywords": [
     "Cypress",
