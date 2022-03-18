@@ -1,5 +1,6 @@
 
 #!/usr/bin/env bash
+DIR_PROJECT="$(dirname ${PWD})"
 DIR_CONFIG="$(dirname ${PWD})/lighthouse/"
 DIR_LH_GEN_REPORT="$(dirname ${PWD})/script/.lighthouseci"
 
@@ -43,12 +44,17 @@ test() {
       echo "========================="
       echo "Lighthouse assert is failling... $1 $2"
       echo "========================="
-      #EXIT_CODE=1
+      EXIT_CODE=1
   fi
 }
 
 report() {
-  open .lighthouseci/lhr-*.html
+  open $DIR_PROJECT/scripts/.lighthouseci/lhr-*.html
+}
+
+clean() {
+  echo  " delete => $DIR_PROJECT/scripts/.lighthouseci"
+  rm -rf $DIR_PROJECT/scripts/.lighthouseci
 }
 
 
@@ -57,10 +63,13 @@ test)
   test
   ;;
 report)
-  test
+  report
+  ;;
+clean)
+  clean
   ;;
 *)
-  echo "Usage: $0 {test|report}" >&2
+  echo "Usage: $0 {test|report|clean}" >&2
   echo "Example: ./lighthouse-testing.sh test 'http://localhost:3000'" >&2
   echo "Example: ./lighthouse-testing.sh report" >&2
   exit 1
