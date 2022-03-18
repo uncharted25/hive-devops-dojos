@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-DIR_PIPELINES="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
-DIR_REPORTS="$(dirname ${DIR_PIPELINES})/reports"
+DIR_SCRIPTS="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+DIR_REPORTS="$(dirname ${DIR_SCRIPTS})/reports"
 
 echo $DIR_REPORTS
 
