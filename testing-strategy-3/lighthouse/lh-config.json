@@ -1,0 +1,58 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 1,
+      "settings": {
+        "chromeFlags": "--no-sandbox --headless",
+        "disableNetworkThrottling": true,
+        "disableCpuThrottling": true,
+        "throttlingMethod": "provided",
+        "formFactor": "desktop",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4143.7 Safari/537.36 Chrome-Lighthouse"
+      }
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "categories:performance": ["error", { "minScore": 0.6 }],
+        "categories:accessibility": ["error", { "minScore": 0.7 }],
+        "categories:best-practices": ["error", { "minScore": 0.7 }],
+        "categories:seo": ["error", { "minScore": 0.7 }],
+        "apple-touch-icon": "off",
+        "color-contrast": "off",
+        "errors-in-console": "off",
+        "external-anchors-use-rel-noopener": "off",
+        "frame-title": "off",
+        "installable-manifest": "off",
+        "link-name": "off",
+        "link-text": "off",
+        "maskable-icon": "off",
+        "meta-description": "off",
+        "no-vulnerable-libraries": "off",
+        "non-composited-animations": "off",
+        "service-worker": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "off",
+        "unminified-javascript": "off",
+        "unsized-images": "off",
+        "unused-css-rules": "off",
+        "unused-javascript": "off",
+        "uses-passive-event-listeners": "off",
+        "uses-rel-preconnect": "off",
+        "valid-source-maps": "off",
+        "font-display": "off",
+        "duplicate-id-aria": "off",
+        "legacy-javascript": "off",
+        "uses-long-cache-ttl": "off",
+        "label": "off"
+      }
+    }
+  }
+}
