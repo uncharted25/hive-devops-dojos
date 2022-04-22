@@ -65,6 +65,7 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                     sh """
                     ./load-testing.sh test "${PREPROD}"
+                    ./audit.sh test "${PREPROD}"
                     """
                 }
             }
@@ -82,17 +83,16 @@ pipeline {
             steps {
                 dir("${SCRIPTS_PATH}") {
                     sh """
-                    ./load-testing.sh test "${PREPROD}"
                     """
                 }
             }
             post{
                 success{
-                    echo "========TEST DEV SUCCESS========"
+                    echo "========PROD SUCCESS========"
                 }
                 failure{
-                    echo "========TEST DEV FAILURE========"
-                    error("========TEST DEV FAILURE========")
+                    echo "========PROD FAILURE========"
+                    error("========PROD FAILURE========")
                 }
             }
         }
