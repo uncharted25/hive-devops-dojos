@@ -12,7 +12,7 @@ fi
 ENVIRONMENT="$2"
 
 test() {
-  ab -n 10000 -c 10 "https://www.google.com/" >$DIR_REPORTS/load-testing-result.txt 2>&1
+  ab -n 10000 -c 10  -H "pod-canary:enable" "http://localhost:3000" >$DIR_REPORTS/load-testing-result.txt 2>&1
 }
 
 clean() {
