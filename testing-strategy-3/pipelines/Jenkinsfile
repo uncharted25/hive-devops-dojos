@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "NODEJS"}
+    tools {nodejs "NodeJS"}
 
     environment {
         PROJECT_PATH="${env.JENKINS_HOME}/workspace/OnBoardingPart3/testing-strategy-3"
