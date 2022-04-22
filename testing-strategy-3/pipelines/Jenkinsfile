@@ -89,6 +89,11 @@ pipeline {
                 }
             }
             post{
+                always {  
+                    echo "Stop web"
+                    sh "kill \$(lsof -t -i :3000)"
+
+                }
                 success{
                     echo "========PROD SUCCESS========"
                 }
