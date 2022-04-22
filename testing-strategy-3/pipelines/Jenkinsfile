@@ -27,6 +27,7 @@ pipeline {
             steps {
                 dir("${SCRIPTS_PATH}") {
                     sh """
+                    echo "$SCRIPTS_PATH"
                     ./setup-node.sh run "${DEV}"
                     """
                 }
