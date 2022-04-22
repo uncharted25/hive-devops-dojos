@@ -19,8 +19,8 @@ pipeline {
             steps {
                 dir("${SCRIPTS_PATH}") {
                     sh """
-                    ./application-management.sh build "${DEV}"
-                    ./application-management.sh start "${DEV}"
+                    ./application-management.sh build "${DEV}" 
+                    ./application-management.sh start "${DEV}" &
                     """
                 }
             }
