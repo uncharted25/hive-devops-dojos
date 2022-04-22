@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PROJECT_PATH="${env.JENKINS_HOME}/workspace/OnBoardingPart3/test-strategy-3"
+        PROJECT_PATH="${env.JENKINS_HOME}/workspace/OnBoardingPart3/testing-strategy-3"
         SCRIPTS_PATH="${PROJECT_PATH}/scripts"
         REPORT_PATH="${E2E_PATH}/reports"
         E2E_WEB_PATH="${PROJECT_PATH}/e2e-web"
