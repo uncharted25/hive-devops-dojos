@@ -1,0 +1,25 @@
+
+Feature: A user should be able to checkout from myaccount subscriptions page 11 skipped
+  Scenario: A logged user should be able to purchase Recurring TIDPLUS with DCB
+  Scenario: A logged user should be able to purchase Recurring EPL successfully with DCB
+  Scenario: A logged user should be able to purchase 7-day OC EPL successfully with DCB
+  Scenario: A logged user should be able to purchase TVOD successfully with DCB
+  Scenario: A logged user should be able to purchase Recurring TIDPLUS successfully with TrueMoney Wallet
+  Scenario: A logged user should be able to purchase Recurring EPL successfully with TrueMoney Wallet
+  Scenario: A logged user should be able to purchase 1-year OC TIDPLUS successfully with Card
+  Scenario: A logged user should see TruePoint in payment method
+  Scenario: A logged user should be able to verify TMH payment source with OTP
+  Scenario: A logged user should be able to purchase iQIYI successfully with Card
+  Scenario: SUBSCRIBE-342 A logged user should not be able to TIDPLUS successfully after OTP verified
+
+Feature: iOS user should be able see checkout screen 2 skipped
+  Scenario: A logged iOS user should be able to open the checkout page from TV player
+  Scenario: A logged iOS user should be able to see IAP from subscription checkout
+
+Feature: WebView user should be able see checkout screen 2 skipped
+  Scenario: A logged iOS user should be able to read term & condition movie as PDF modal
+  Scenario: A logged Android user should be able to see point can pay
+
+Feature: Multi langage support 1 skipped
+  Scenario: A user who has display language setting as TH should have TH language
+
