@@ -2,4 +2,4 @@
 
 FILE=$(pwd)/../example.txt
 
-grep -c devops $FILE
+grep -o devops $FILE | wc -l | tr -d ' '

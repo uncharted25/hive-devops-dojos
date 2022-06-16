@@ -2,7 +2,7 @@
 
 ## exercise 1
 
-counting the word "devops" (how to use grep command)
+counting the word "devops" from file "example.txt" (how to use grep command)
 https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
 ## exercise 2

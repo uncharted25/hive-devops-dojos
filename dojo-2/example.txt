@@ -39,7 +39,7 @@ What is a random word?
 
 In the case of our random devops word generator, a random word is a word that is randomly chosen from the database of words we have in our generator. It's a word that you have no idea or control over appearing, so you aren't able to influence the resulting word in any way.
 
-What is the most random word? devops
+What is the most random word? devops devops
 
 The most random word in English is aardvark. Of course, there's really no way to answer this question because its entirely based on opinion. That being said, feel free to contact us if you think you know a more random word than aardvark.
 
