@@ -14,19 +14,31 @@ pipeline {
 
     stages {
         stage('Build') {
-           
+           steps {
+                dir("${SCRIPTS_PATH}") {
+                    sh """
+                    echo "Build"
+                    """
+                }
+            }
         }
-        stage('Prepare test environment on DEV') {
-            
-        }
-        stage('Prepare tests environment on ALPHA') {
-            
-        }
-        stage('Prepare tests environment on PREPROD') {
-            
+        stage('Test environment DEV') {
+            steps {
+                dir("${SCRIPTS_PATH}") {
+                   sh """
+                    echo "Test"
+                    """
+                }
+            }
         }
         stage('Deployment') {
-            
+            steps {
+                dir("${SCRIPTS_PATH}") {
+                   sh """
+                    echo "Deployment"
+                    """
+                }
+            }
         }
     }
 }
